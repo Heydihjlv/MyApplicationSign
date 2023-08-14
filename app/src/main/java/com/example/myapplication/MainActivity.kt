@@ -108,7 +108,7 @@ private fun signOut(){
                         "${classes[1]}: ${confidence[1]}\n"+
                         "${classes[2]}: ${confidence[2]}\n"+*/
 
-                        "mejor: ${classes[maxConfidence]}"
+                        "Result: ${classes[maxConfidence]}"
             }
             }
 

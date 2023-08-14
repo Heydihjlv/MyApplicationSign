@@ -15,6 +15,15 @@
             android:name=".SignUpActivity"
             android:exported="false" />
         <activity
+            android:name=".inicio"
+            android:exported="false" />
+        <activity
+            android:name=".tema1"
+            android:exported="false" />
+        <activity
+            android:name=".videos"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity

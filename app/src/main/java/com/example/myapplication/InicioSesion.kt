@@ -77,7 +77,7 @@ class InicioSesion : AppCompatActivity() {
             }
     }
     private fun reload(){
-        val intent=Intent(this, MainActivity::class.java)
+        val intent=Intent(this, inicio::class.java)
         this.startActivity(intent)
     }
 
