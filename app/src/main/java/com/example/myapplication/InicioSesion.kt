@@ -36,7 +36,31 @@ class InicioSesion : AppCompatActivity() {
            }
            }
         }
+
+        binding.signUpTextView.setOnClickListener {
+            val intent = Intent(this, SignUpActivity::class.java)
+            this.startActivity(intent)
+        }
+        /*
+        binding.recoveryAccountTextView.setOnClickListener {
+            val intent = Intent(this, AccountRecoveryActivity::class.java)
+            this.startActivity(intent)
+        }
+        */
     }
+
+    /*public override fun onStart() {
+        super.onStart()
+        val currentUser = auth.currentUser
+        if(currentUser != null){
+            if(currentUser.isEmailVerified){
+                reload()
+            } else {
+               // val intent = Intent(this, CheckEmailActivity::class.java)
+                this.startActivity(intent)
+            }
+        }
+    }*/
 
     private fun signIn(email: String, password: String) {
         auth.signInWithEmailAndPassword(email, password)

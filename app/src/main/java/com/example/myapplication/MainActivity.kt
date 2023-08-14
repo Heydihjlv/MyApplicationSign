@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.Matrix
 import androidx.appcompat.app.AppCompatActivity
@@ -7,12 +8,19 @@ import android.os.Bundle
 import androidx.camera.core.ImageProxy
 import androidx.camera.core.impl.utils.MatrixExt.postRotate
 import com.example.myapplication.databinding.ActivityMainBinding
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import com.ingenieriiajhr.jhrCameraX.BitmapResponse
 import com.ingenieriiajhr.jhrCameraX.CameraJhr
 import com.ingenieriiajhr.jhrCameraX.ImageProxyResponse
 
 class MainActivity : AppCompatActivity() {
-    lateinit var binding : ActivityMainBinding
+   private lateinit var auth: FirebaseAuth
+   private lateinit var binding: ActivityMainBinding
+
+
+  //  lateinit var binding : ActivityMainBinding
     lateinit var cameraJhr: CameraJhr
 
     lateinit var classifyTf: ClassifyTf
@@ -26,13 +34,22 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        auth = Firebase.auth
 
         classifyTf=ClassifyTf(this)
 
         //init cameraJHR
         cameraJhr = CameraJhr(this)
 
+        //signOut()
     }
+
+private fun signOut(){
+    Firebase.auth.signOut()
+    val intent =Intent(this, SignUpActivity::class.java)
+    startActivity(intent)
+}
+
 
     override fun onWindowFocusChanged(hasFocus: Boolean) {
         super.onWindowFocusChanged(hasFocus)
