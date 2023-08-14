@@ -25,12 +25,13 @@ class InicioSesion : AppCompatActivity() {
         auth= Firebase.auth
         binding.signInAppCompatButton.setOnClickListener{
             val nEmail = binding.emailEditText.text.toString()
-            val nPassword = binding.passwordEditText.toString()
+            val nPassword = binding.passwordEditText.text.toString()
            when{
                nEmail.isEmpty() || nPassword.isEmpty() -> {
                    Toast.makeText(baseContext,"correo o contrasenia incorrecto",
                         Toast.LENGTH_SHORT).show()
-               } else ->{
+               }
+               else ->{
                signIn(nEmail,nPassword)
            }
            }
@@ -42,6 +43,7 @@ class InicioSesion : AppCompatActivity() {
             .addOnCompleteListener(this){task ->
                 if (task.isSuccessful) {
                     Log.d("TAG", "signInWithEmail:success")
+                    reload()
                 } else {
                     Log.w("TAG", "signInWithEmail:failure", task.exception)
                     Toast.makeText(baseContext, "Email o contraseña o incorrectos.",
