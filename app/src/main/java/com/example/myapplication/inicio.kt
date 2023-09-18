@@ -20,5 +20,11 @@ class inicio : AppCompatActivity() {
             val intent: Intent = Intent(this, videos:: class.java)
             startActivity(intent)
         }
+
+        val btn3: Button = findViewById(R.id.button6)
+        btn3.setOnClickListener{
+            val intent: Intent = Intent(this, preguntas:: class.java)
+            startActivity(intent)
+        }
     }
 }
