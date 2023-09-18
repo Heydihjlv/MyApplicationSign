@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
    private lateinit var txPregun: TextView
 
     // Tiempo en milisegundos para cambiar la pregunta (5 segundos)
-    private val tiempoCambioPregunta = 5000L
+    private val tiempoCambioPregunta = 10000L
 
     // Handler para ejecutar la tarea periódica
     private val handler = Handler()
