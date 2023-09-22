@@ -31,9 +31,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="@string/title_active_login"
+            android:text="Lenguaje de Señas"
             android:textColor="@color/black"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            tools:text="Lenguaje de Señas" />
     </LinearLayout>
 
     <LinearLayout
@@ -58,7 +59,7 @@
             android:drawableStart="@drawable/ic_email"
             android:drawablePadding="16dp"
             android:ems="10"
-            android:hint="@string/email"
+            android:hint="Correo electrónico"
             android:inputType="textEmailAddress"
             android:padding="16dp" />
 
@@ -97,7 +98,7 @@
             android:background="@drawable/ic_buttom"
             android:paddingLeft="64dp"
             android:paddingRight="64dp"
-            android:text="@string/login"
+            android:text="Iniciar Sesión"
             android:textColor="@color/white" />
     </LinearLayout>
 
@@ -127,7 +128,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_weight="0"
-            android:text="@string/link_signup"
+            android:text="Registrate"
             android:textColor="#ff9900"
             android:textSize="24sp" />
     </LinearLayout>

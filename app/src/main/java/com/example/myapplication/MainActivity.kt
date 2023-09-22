@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
 
    private lateinit var txPregun: TextView
 
-    // Tiempo en milisegundos para cambiar la pregunta (5 segundos)
+    // Tiempo en milisegundos para cambiar la pregunta (10 segundos)
     private val tiempoCambioPregunta = 10000L
 
     // Handler para ejecutar la tarea periódica
@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
         const val INPUT_SIZE = 224
     }
 
-    val classes = arrayOf("A", "B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y")
+    val classes = arrayOf("A", "B","C","D","E","F")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
